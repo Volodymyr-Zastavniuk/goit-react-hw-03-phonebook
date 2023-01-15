@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import initialContacts from '../contacts';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
