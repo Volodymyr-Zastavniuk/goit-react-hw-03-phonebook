@@ -7,9 +7,23 @@ import Section from './Section/Section';
 
 export class App extends Component {
   state = {
-    contacts: initialContacts,
+    contacts: [],
     filter: '',
   };
+  componentDidMount() {
+    const parcedContacts = JSON.parse(localStorage.getItem('savedContacts'));
+    console.log(parcedContacts);
+    if (parcedContacts) {
+      this.setState({ contacts: parcedContacts });
+    }
+  }
+  componentDidUpdate(_, prevState) {
+    const nextContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
+    if (prevContacts !== nextContacts) {
+      localStorage.setItem('savedContacts', JSON.stringify(nextContacts));
+    }
+  }
 
   handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -59,7 +73,7 @@ export class App extends Component {
           <ContactList
             filteredContacts={filteredContacts}
             onDeleteBtnClick={this.deleteContact}
-          ></ContactList>{' '}
+          ></ContactList>
         </Section>
       </>
     );
