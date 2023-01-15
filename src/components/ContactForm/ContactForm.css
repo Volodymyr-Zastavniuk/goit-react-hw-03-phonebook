@@ -1,0 +1,31 @@
+.contact__form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+}
+.contact__label {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact__input {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.contact__btn {
+  width: 150px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.contact__btn:hover,
+.contact__btn:focus {
+  background-color: rgb(171, 167, 167);
+}

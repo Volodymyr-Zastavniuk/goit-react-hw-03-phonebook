@@ -1,0 +1,19 @@
+.contact-list__item {
+  display: flex;
+  justify-content: space-between;
+  list-style: circle;
+}
+
+.contact-list__btn {
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.contact-list__btn:hover,
+.contact-list__btn:focus {
+  background-color: rgb(171, 167, 167);
+}
